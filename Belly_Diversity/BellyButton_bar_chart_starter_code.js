@@ -89,23 +89,22 @@ function buildCharts(sample) {
 
     const array_id = otu_ids;
     ytick = array_id.reverse().slice(0,10).map((x => " otu_id " + x));
-            
+    console.log(ytick);      
 
     // 8. Create the trace for the bar chart. 
   
 
     var trace = {
 
-     y: [342, 357, 2188, 2110, 340, 2065, 121, 1968, 1960, 2235],
+     y: ytick,
 
      x: [0, 40, 47, 50, 51, 71, 78, 113, 126, 16],
-
-
-    
      type: 'bar',
      orientation: 'h'
     };
     var barData = [trace];
+
+
     console.log(otu_ids);
     console.log(sample_values);
    
