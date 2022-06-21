@@ -5,38 +5,34 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Bellybutton Biodiversity</title>
+  <title>Belly Button Biodiversity</title>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 </head>
-<style>
-  .jumbotron {
-      background: url("https://www.turbosquid.com/FullPreview/Index.cfm/ID/316639") center center / cover no-repeat;
-  }
-</style>
 
 <body>
-  <div class="container">
-    <div class="col-md-12 jumbotron text-center">
-      <h1>Belly Button Biodiversity Dashboard</h1>
-      <p>Use the interactive charts below to explore the dataset</p>
-    </div>
-    <div class="p-3 mb-2 bg-warning text-dark">
 
-    
-    <div class="container">
-      <p>
-        Roza is a biological researcher who works with discovering new bacterial species which can synthesize proteins that taste like beef.  Her lab has partnered with Improbable Beef to search for bacteria that will provide the closest resemblance in terms of taste.   The human body is a large source for harboring species particularly in the gut. The variation between individuals is center to Rozas hypothesis that one of the participants will contain the right type of bacteria in their navels which would be a breakthrough for Rozas lab and Improbable Beef.
-        </p>
-      <p>We helped Rosa build a drop-down array containing her sample demographic which lets individual participants select their ID numbers. We also created a dashboard with a bar, bubble, and gauge chart to let them see which types of species are contained within their navels.</p>
-    </div>
+  <div class="container">
     <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>Belly Button Biodiversity Dashboard</h1>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+      <div class = "p-3 mb-2 bg-warning text-dark">
+        <div class = "container">
+          <p>
+            Roza is a biological researcher who works with discovering new bacterial species which can synthesize proteins that taste like beef.  Her lab has partnered with Improbable Beef to search for bacteria that will provide the closest resemblance in terms of taste.   The human body is a large source for harboring species particularly in the gut. The variation between individuals is center to Roza’s hypothesis that one of the participants will contain the right type of bacteria in their navels which would be a breakthrough for Roza’s lab and Improbable Beef.
+          </p>
+          <p>We helped Rosa build a drop-down array containing her sample demographic which lets individual participants select their ID numbers. We also created a dashboard with a bar, bubble, and gauge chart to let them see which types of species are contained within their navels. </p>
+
+
+
+        </div>
       </div>
     </div>
     <div class="row">
       <div class="col-md-2">
         <div class="well">
           <h5>Test Subject ID No.:</h5>
-          <!-- <select id="selDataset"></select> -->
           <select id="selDataset" onchange="optionChanged(this.value)"></select>
         </div>
         <div class="panel panel-primary">
@@ -59,11 +55,12 @@
       </div>
     </div>
   </div>
-</div>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
   <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
   <script src="BellyButton_bar_chart_starter_code.js"></script>
-  
+  <!-- <script src="BellyButton_bubble_chart_solution.js"></script> -->
+  <!-- <script src="charts_solution.js"></script> -->
 
 </body>
 
