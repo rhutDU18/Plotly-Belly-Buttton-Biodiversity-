@@ -11,36 +11,28 @@ function buildCharts(sample) {
     // Create a variable that filters the samples for the object with the desired sample number.
     // 1. Create a variable that filters the metadata array for the object with the desired sample number.
 
-    var metadataArray = metadata.filter((sampleObj) => sampleObj.id == sample);
-    var metadata = metadataArray[0]
+    var metadataArray = data.metadata.filter((sampleObj) => sampleObj.id == sample);
+    var metadata1 = metadataArray[0]
 
     // Create a variable that holds the first sample in the array.
     // 2. Create a variable that holds the first sample in the metadata array.
 
-
-    var firstSample = d3.json("samples.json").then(function(data){
-    firstSample = data.metadata[0];
-
-    });
-
     // Create variables that hold the otu_ids, otu_labels, and sample_values.
-    var otu_ids = result.otu_ids;
+    var otu_ids = otu_ids;
 
-    var otu_labels = result.otu_labels;
+    var otu_labels = otu_labels;
 
-    var sample_values = result.sample_values;
+    var sample_values = sample_values;
 
     // 3. Create a variable that holds the washing frequency.
 
-    var wfreq = parseFloat(metadata.wfreq);  
+    var wfreq = parseFloat(metadata1.wfreq);  
     //var wfreq= parseInt(washing_frequnecy);
-
 
     // Create the yticks for the bar chart.
 
-    const array_id = otu_ids;
-    ytick = array_id.reverse().slice(0,10).map((x => " otu_id " + x));
-    console.log(ytick);      
+    
+    var yticks = otu_ids.slice(0, 10).map(otuID => OTU ${otuID}).reverse()     
 
 
     // Use Plotly to plot the bar data and layout.
@@ -58,8 +50,8 @@ function buildCharts(sample) {
     domain: {x: [0,1], y: [0, 1] },
     value: wfreq,
     type: indicator,
-    mode: {'gauge + number'},
-    title: {text: " "},
+    mode: "gauge + number",
+    title: {text: "Belly Button Washing Frequency"},
     gauge: {
       axis: { range: [null, 10] },
       steps: [
